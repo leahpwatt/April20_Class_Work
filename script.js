@@ -15,13 +15,17 @@ var groceryList = [
 	];
 
 var total = 0;
-
 var list = document.getElementById("list");
+var foodTotal = document.getElementById("foodTotal");
+
 groceryList.forEach(function(item){
 var newItem = document.createElement("li");
 newItem.innerText += item.name + ": " + item.price;
 list.appendChild(newItem);
+total += item.price;
 });
+
+	foodTotal.innerText = "The total is " + total + ("!");
 
 
 
